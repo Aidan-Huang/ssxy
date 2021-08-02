@@ -1,0 +1,49 @@
+
+digraph 世说新语德行第一之六
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "世说新语德行第一之六";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	陈寔 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>陈寔 [104]</td></tr><tr><td>(字:仲弓, 官职:太丘长)</td></tr><tr><td></td></tr><tr><td>卒时会葬者三万余人<br/>谥文范先生<br/></td></tr></table>>];
+	陈谌 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>陈谌</td></tr><tr><td>(字:季方)</td></tr><tr><td></td></tr><tr><td>“难兄难弟”: 元方难为兄，季方难为弟<br/></td></tr></table>>];
+	陈纪 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>陈纪 [129]</td></tr><tr><td>(字:元方, 官职:大鸿胪)</td></tr><tr><td></td></tr><tr><td>东汉末年名士和官员<br/>与父陈寔及弟陈谌当时并称“三君”<br/></td></tr></table>>];
+	陈群 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>陈群</td></tr><tr><td>(字:长文, 官职:颍阴靖侯)</td></tr><tr><td></td></tr><tr><td>"九品中正制"创建者<br/>曹魏政权的大臣（曾为刘备效力）<br/></td></tr></table>>];
+	荀淑 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>荀淑 [83]</td></tr><tr><td>(字:季和, 官职:郎陵侯相)</td></tr><tr><td></td></tr><tr><td>战国荀子11世孙<br/>八子皆才德名世，时人谓之“八龙”。<br/></td></tr></table>>];
+	荀爽 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>荀爽 [128]</td></tr><tr><td>(字:慈明)</td></tr><tr><td></td></tr><tr><td>“荀氏八龙，慈明无双“<br/></td></tr></table>>];
+	荀靖 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>荀靖</td></tr><tr><td>(字:叔慈, 号:玄行先生)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	荀绲 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>荀绲</td></tr><tr><td>(字:仲慈, 官职:济南相)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	荀彧 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>荀彧 [163]</td></tr><tr><td>(字:文若, 官职:侍中兼尚书令)</td></tr><tr><td></td></tr><tr><td>曹操称赞“吾之子房”<br/></td></tr></table>>];
+
+	陈寔 -> 陈谌 [label="子", style=solid, color="blue"];
+	陈寔 -> 陈纪 [label="长子", style=solid, color="blue"];
+	陈纪 -> 陈群 [label="独子", style=solid, color="blue"];
+	荀淑 -> 荀绲 [label="子", style=solid, color="blue"];
+	荀淑 -> 荀靖 [label="子", style=solid, color="blue"];
+	荀淑 -> 荀爽 [label="子", style=solid, color="blue"];
+	荀绲 -> 荀彧 [label="子", style=solid, color="blue"];
+	荀彧 -> 陈群 [label="女婿", style=dotted, color="blue"];
+
+
+	subgraph "cluster_陈寔"
+	{
+		fontsize="18";
+		label="陈寔家族";
+		陈寔;陈谌;陈纪;陈群;
+	}
+
+	subgraph "cluster_荀淑"
+	{
+		fontsize="18";
+		label="荀淑家族";
+		荀淑;荀爽;荀靖;荀绲;荀彧;
+	}
+
+}

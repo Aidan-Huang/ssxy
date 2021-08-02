@@ -1,0 +1,27 @@
+
+digraph 世说新语之竹林七贤
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "世说新语之竹林七贤";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	嵇康 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>嵇康 [223]</td></tr><tr><td>(字:叔夜, 官职:中散大夫)</td></tr><tr><td></td></tr><tr><td>“《广陵散》于今绝矣！”<br/>《与山巨源绝交书》<br/></td></tr></table>>];
+	竹林七贤 [shape="ellipse", color="green", label=<<table border="0" cellborder="0"><tr><td>竹林七贤</td></tr><tr><td></td></tr><tr><td>魏末晋初的七位名士<br/></td></tr></table>>];
+	阮籍 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>阮籍 [210]</td></tr><tr><td>(字:嗣宗, 官职:步兵校尉)</td></tr><tr><td></td></tr><tr><td>“时无英雄，使竖子成名。”<br/></td></tr></table>>];
+	山涛 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>山涛 [205]</td></tr><tr><td>(字:巨源)</td></tr><tr><td></td></tr><tr><td>“璞玉浑金，人莫知其器。”<br/></td></tr></table>>];
+	向秀 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>向秀</td></tr><tr><td>(字:子期, 官职:散骑常侍)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+
+	嵇康 -> 竹林七贤 [label="", style=dotted, color="green"];
+	阮籍 -> 竹林七贤 [label="", style=dotted, color="green"];
+	山涛 -> 竹林七贤 [label="", style=dotted, color="green"];
+	向秀 -> 竹林七贤 [label="", style=dotted, color="green"];
+
+
+}

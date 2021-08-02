@@ -13,15 +13,24 @@ digraph 世说新语之竹林七贤
 	edge [fontname="SimSun"];
 
 	嵇康 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>嵇康 [223]</td></tr><tr><td>(字:叔夜, 官职:中散大夫)</td></tr><tr><td></td></tr><tr><td>“《广陵散》于今绝矣！”<br/>《与山巨源绝交书》<br/></td></tr></table>>];
+	嵇绍 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>嵇绍 [253]</td></tr><tr><td>(字:延祖, 官职:侍中)</td></tr><tr><td></td></tr><tr><td>舍身护晋惠帝而亡<br/></td></tr></table>>];
 	竹林七贤 [shape="ellipse", color="green", label=<<table border="0" cellborder="0"><tr><td>竹林七贤</td></tr><tr><td></td></tr><tr><td>魏末晋初的七位名士<br/></td></tr></table>>];
 	阮籍 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>阮籍 [210]</td></tr><tr><td>(字:嗣宗, 官职:步兵校尉)</td></tr><tr><td></td></tr><tr><td>“时无英雄，使竖子成名。”<br/></td></tr></table>>];
 	山涛 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>山涛 [205]</td></tr><tr><td>(字:巨源)</td></tr><tr><td></td></tr><tr><td>“璞玉浑金，人莫知其器。”<br/></td></tr></table>>];
 	向秀 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>向秀</td></tr><tr><td>(字:子期, 官职:散骑常侍)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	王戎 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王戎 [234]</td></tr><tr><td>(字:濬冲, 官职:司徒, 爵位:安丰侯)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	刘伶 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>刘伶 [221]</td></tr><tr><td>(字:伯伦)</td></tr><tr><td></td></tr><tr><td>平生嗜酒，曾作《酒德颂》<br/>“我以天地为栋宇，屋室为裈衣。诸君何为入我裈中？”<br/></td></tr></table>>];
+	阮咸 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>阮咸</td></tr><tr><td>(字:仲容, 官职:始平太守)</td></tr><tr><td></td></tr><tr><td>精通音律<br/>制作了同名乐器——“阮琴”<br/></td></tr></table>>];
 
+	阮籍 -> 阮咸 [label="侄", style=dotted, color="blue"];
+	嵇康 -> 嵇绍 [label="子", style=solid, color="blue"];
 	嵇康 -> 竹林七贤 [label="", style=dotted, color="green"];
 	阮籍 -> 竹林七贤 [label="", style=dotted, color="green"];
 	山涛 -> 竹林七贤 [label="", style=dotted, color="green"];
 	向秀 -> 竹林七贤 [label="", style=dotted, color="green"];
+	王戎 -> 竹林七贤 [label="", style=dotted, color="green"];
+	刘伶 -> 竹林七贤 [label="", style=dotted, color="green"];
+	阮咸 -> 竹林七贤 [label="", style=dotted, color="green"];
 
 
 }

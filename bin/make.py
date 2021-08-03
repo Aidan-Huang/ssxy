@@ -180,9 +180,12 @@ digraph %s
 
     def _node_color(self, node) :
         if u'company' == node.type :
-            return u'green'
+            return u'gray'
+        elif re.match(u'.*帝.*', str(node.other_names)):
+            # re.match(u'^.*?(帝)$', u'<tr><td>(字:仲举帝)</td></tr>')
+            return u'red'
         else :
-            return (u'blue' if u'M'==node.sex else u'red')
+            return (u'blue' if u'M'==node.sex else u'green')
 
     def _other_names(self, node) :
         other_names = ''

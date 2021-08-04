@@ -181,8 +181,7 @@ digraph %s
     def _node_color(self, node) :
         if u'company' == node.type :
             return u'gray'
-        elif re.match(u'.*帝.*', str(node.other_names)):
-            # re.match(u'^.*?(帝)$', u'<tr><td>(字:仲举帝)</td></tr>')
+        elif re.match(u'.*(帝|谥).*', str(node.other_names)):
             return u'red'
         else :
             return (u'blue' if u'M'==node.sex else u'green')
@@ -204,14 +203,63 @@ digraph %s
                     u'<tr><td>%s</td></tr>' \
                     u'<tr><td>%s</td></tr></table>>];\n'
 
+        # print("node_id=" + node_id)
         portrait = u'../data/person/%s/portrait.png' % (node_id,)
+        # print("portrait=" + portrait)
         portrait = u'<img src="%s"/>' % (portrait,) if os.path.exists(portrait) else ''
+
+
+        # 出生日期，年龄
+        # 出生日期是公元前，出生日期的“前”去掉，数值取反
+        # 死亡日期是公元前，死亡日期的“前”去掉，数值取反
+        # 年龄等于死亡日期减去出生日期
+
+        birth_age = u''
+
+        try:
+            if node.birth != u'N/A':
+                birth_age = u'[' + str(node.birth)
+                iBirth = 0
+                iDeath = 0
+                birth = node.birth
+                death = node.death
+
+                if(str(birth).startswith('前')):
+                    iBirth = 0 - int(birth.strip("前"))
+                else:
+                    iBirth = int(birth)
+
+                # print("iBirth=" + str(iBirth))
+
+                if (death != u'N/A'):
+                    if (str(death).startswith('前')):
+                        iDeath = 0 - int(death.strip("前"))
+                    else:
+                        iDeath = int(death)
+
+                # print("iDeath=" + str(iDeath))
+
+                age = iDeath - iBirth
+
+                # print("age=" + str(age))
+
+                if age != 0:
+                    birth_age = birth_age + u',' + str(age) + u']'
+                else:
+                    birth_age = birth_age + u']'
+        except Exception as err:
+            print(u'error!\n%s' % err)
+
+        # print("node.birth=" + str(node.birth))
+        # print("node.death=" + str(node.death))
+        # print("birth_age=" + birth_age)
 
         return template % (node.id,
                            u'box' if u'person'==node.type else u'ellipse',
                            self._node_color(node),
                            node.name,
-                           (u'' if node.birth==u'N/A' else u' [%s]'%node.birth),
+                           # (u'' if node.birth == u'N/A' else u' [%s'% node.birth + (u']' if node.death == u'N/A' else u',%s]'% str(int(node.death) - int(node.birth)))),
+                           birth_age,
                            self._other_names(node),
                            portrait,
                            node.desc.replace(u'\n', u'<br/>'))

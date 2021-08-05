@@ -218,13 +218,15 @@ digraph %s
 
         try:
             if node.birth != u'N/A':
-                birth_age = u'[' + str(node.birth)
                 iBirth = 0
                 iDeath = 0
-                birth = node.birth
-                death = node.death
+                age = 0
+                birth = str(node.birth)
+                death = str(node.death)
 
-                if(str(birth).startswith('前')):
+                birth_age = u'[' + str(node.birth)
+
+                if(birth.startswith('前')):
                     iBirth = 0 - int(birth.strip("前"))
                 else:
                     iBirth = int(birth)
@@ -232,14 +234,14 @@ digraph %s
                 # print("iBirth=" + str(iBirth))
 
                 if (death != u'N/A'):
-                    if (str(death).startswith('前')):
+                    if (death.startswith('前')):
                         iDeath = 0 - int(death.strip("前"))
                     else:
                         iDeath = int(death)
 
-                # print("iDeath=" + str(iDeath))
+                    age = iDeath - iBirth + 1
 
-                age = iDeath - iBirth
+                # print("iDeath=" + str(iDeath))
 
                 # print("age=" + str(age))
 

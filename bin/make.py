@@ -182,9 +182,9 @@ digraph %s
         if u'company' == node.type :
             return u'gray'
         elif re.match(u'.*(帝|谥).*', str(node.other_names)):
-            return (u'red' if u'M'==node.sex else u'orange')
+            return (u'red' if u'M'==node.sex else u'darkorange')
         else :
-            return (u'blue' if u'M'==node.sex else u'green')
+            return (u'blue' if u'M'==node.sex else u'darkgreen')
 
     def _other_names(self, node) :
         other_names = ''

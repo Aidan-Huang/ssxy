@@ -71,10 +71,11 @@ class Relation :
                 _raise_err(u'Invalid family name: "%s"!', family_id)
 
             yaml = _load_yaml(yaml_file)
-            for lst in yaml[u'relations'] :
-                relation = Relation(lst)
-                Relation.all[relation.name] = relation
-                Relation.keys.append(relation.name)
+            if yaml[u'relations']:
+                for lst in yaml[u'relations'] :
+                    relation = Relation(lst)
+                    Relation.all[relation.name] = relation
+                    Relation.keys.append(relation.name)
         print(u'Relation number: %d' % len(Relation.all))
 
 
@@ -275,7 +276,7 @@ digraph %s
             style = u'bold'
         elif re.match(u'^父|母$', relation.desc) :
             style = u'solid'
-        elif re.match(u'^(独|长|次|三|四|五|六|七)?(子|女)$', relation.desc) :
+        elif re.match(u'^(独|长|次|幼|三|四|五|六|七)?(子|女)$', relation.desc) :
             style = u'solid'
         elif re.match(u'^.*?(兄|弟|姐|妹)$', relation.desc) :
             style = u'dashed'
@@ -321,24 +322,37 @@ class Builder :
         print(cmd)
         return os.system(cmd.encode(u'utf-8'))
 
+    def output(self, name, graph, file_type):
+        dot_file = u'../download/dot/%s.dot' % (name,)
+        output_file = u'../download/%s/%s.%s' % (file_type, name, file_type)
+
+        with open(dot_file, u'wb') as f:
+            f.write(Graph(graph).dump().encode(u'utf-8'))
+
+        cmd = u'dot "%s" -T %s -o "%s"' % (dot_file, file_type, output_file)
+        # print(cmd)
+        if os.system(cmd) != 0:
+            _raise_err(u'Make "%s" failed!', dot_file)
+
     def do(self, file_type) :
         os.chdir(u'../download/')
         self._mkdir(u'dot')
         self._mkdir(file_type)
-        n = 0
-        for graph in _load_yaml(u'../data/graph.yaml') :
-            n += 1
-            name = u'%02d-%s' % (n, graph[u'name'])
-            dot_file = u'../download/dot/%s.dot' % (name,)
-            output_file = u'../download/%s/%s.%s' % (file_type, name, file_type)
 
-            with open(dot_file, u'wb') as f :
-                f.write(Graph(graph).dump().encode(u'utf-8'))
+        files = ['言语_94']
 
-            cmd = u'dot "%s" -T %s -o "%s"' % (dot_file, file_type, output_file)
-            # print(cmd)
-            if os.system(cmd) != 0 :
-                _raise_err(u'Make "%s" failed!', dot_file)
+        for i in range(2, 3):
+            filename = u'../data/graph' + str(i) + '.yaml'
+
+            if len(files) > 0:
+                for graph in _load_yaml(filename):
+                    name = u'%s' % (graph[u'name'])
+                    if name in files:
+                        self.output(name, graph, file_type)
+            else:
+                for graph in _load_yaml(filename):
+                    name = u'%s' % (graph[u'name'])
+                    self.output(name, graph, file_type)
         return 0
 
 

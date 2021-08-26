@@ -8,7 +8,6 @@ import re
 from io import StringIO
 import yaml
 
-
 def _raise_err(format, *args) :
     raise ValueError(format % args)
 
@@ -62,6 +61,8 @@ class Relation :
     all = {}
     keys = []
 
+    single_relation = True
+
     @classmethod
     def init(cls) :
         for family_id in os.listdir(u'../data/family/') :
@@ -74,8 +75,11 @@ class Relation :
             if yaml[u'relations']:
                 for lst in yaml[u'relations'] :
                     relation = Relation(lst)
+
                     Relation.all[relation.name] = relation
                     Relation.keys.append(relation.name)
+                    # print(u'Relation name: %s' % relation.name)
+
         print(u'Relation number: %d' % len(Relation.all))
 
 
@@ -84,6 +88,7 @@ class Relation :
         self.node_to = lst[1]
         self.desc = lst[2]
         self.name = self.node_from + u'->' + self.node_to
+        self.equal = False
 
         if self.name in Relation.all :
             _raise_err(u'Relation name conflict: "%s"!', self.name)
@@ -92,7 +97,18 @@ class Relation :
         if self.node_to not in Node.all :
             _raise_err(u'Invalid relation "to" attr": "%s"!', self.node_to)
 
+        if Relation.single_relation:
+            if self.node_to + u'->' + self.node_from in Relation.all:
+                self.equal = True
 
+
+    # def is_equal_relation(self, relation: Relation) :
+    #
+    #     if self.node_from == relation.node_to:
+    #         if self.node_to == relation.node_from:
+    #             return True
+    #
+    #     return False
 
 class Family :
     all = {}
@@ -130,7 +146,9 @@ class Graph :
         self._families = yaml[u'families']
         self._families.reverse()
         self._nodes = []
-        self._relations = []
+        self._relations = {}
+        self._relations_keys = []
+
         for f in self._families :
             family = Family.all[f]
             for n in family.members :
@@ -141,7 +159,21 @@ class Graph :
                 if relation.node_from in family.members \
                     and relation.node_to in family.members \
                     and r not in self._relations :
-                    self._relations.append(r)
+                    # self._relations.append(r)
+                    self._relations[relation.name] = relation
+                    self._relations_keys.append(relation.name)
+
+            if Relation.single_relation:
+                for n in self._nodes:
+                    for r in self._relations_keys:
+                        relation = self._relations[r]
+                        equal_name = relation.node_to + u'->' + relation.node_from
+                        if relation.node_from == n:
+                            if equal_name in self._relations_keys:
+                                self._relations_keys.remove(equal_name)
+                                del self._relations[equal_name]
+
+
 
 
     def dump(self) :
@@ -339,9 +371,9 @@ class Builder :
         self._mkdir(u'dot')
         self._mkdir(file_type)
 
-        files = ['言语_94']
+        files = ['test']
 
-        for i in range(2, 3):
+        for i in range(2, 4):
             filename = u'../data/graph' + str(i) + '.yaml'
 
             if len(files) > 0:

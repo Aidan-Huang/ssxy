@@ -13,9 +13,9 @@ def _raise_err(format, *args) :
 
 
 def _load_yaml(yaml_file) :
-    print(u'load: ' + yaml_file)
+    # print(u'load: ' + yaml_file)
     with open(yaml_file, u'rb') as f :
-        return yaml.load(f.read())
+        return yaml.load(f.read(), Loader=yaml.FullLoader)
 
 
 
@@ -192,7 +192,7 @@ class Graph :
                 output.write(self._dot_sub_graph(f))
 
         template = u'''
-digraph %s
+digraph
 {
 \trankdir = "LR";
 \tranksep = 0.5;
@@ -208,7 +208,7 @@ digraph %s
 %s
 }
 '''
-        return template % (self._name, self._name, output.getvalue())
+        return template % (self._name, output.getvalue())
 
 
     def _node_color(self, node) :
@@ -308,7 +308,7 @@ digraph %s
             style = u'bold'
         elif re.match(u'^父|母$', relation.desc) :
             style = u'solid'
-        elif re.match(u'^(独|长|次|幼|三|四|五|六|七)?(子|女)$', relation.desc) :
+        elif re.match(u'^(独|长|次|幼|三|四|五|六|七|八|九)?(子|女)$', relation.desc) :
             style = u'solid'
         elif re.match(u'^.*?(兄|弟|姐|妹)$', relation.desc) :
             style = u'dashed'
@@ -362,18 +362,16 @@ class Builder :
             f.write(Graph(graph).dump().encode(u'utf-8'))
 
         cmd = u'dot "%s" -T %s -o "%s"' % (dot_file, file_type, output_file)
-        # print(cmd)
+        # print('cmd: ' + cmd)
         if os.system(cmd) != 0:
             _raise_err(u'Make "%s" failed!', dot_file)
 
-    def do(self, file_type) :
+    def do(self, file_type, files, graph_range) :
         os.chdir(u'../download/')
         self._mkdir(u'dot')
         self._mkdir(file_type)
 
-        files = ['test']
-
-        for i in range(2, 4):
+        for i in graph_range:
             filename = u'../data/graph' + str(i) + '.yaml'
 
             if len(files) > 0:
@@ -394,7 +392,14 @@ if '__main__' == __name__ :
             print(u'''Usage:\n%s file_type
 (file_type is pdf or jpg or png or gif or tiff or svg or ps)''' % sys.argv[0])
             sys.exit(0)
-        sys.exit(Builder().do(sys.argv[1]))
+
+        Relation.single_relation = True
+        graph_range = range(0, 3)
+        # files = ['01德行001','01德行004','01德行005','01德行006','01德行007','01德行008','01德行010']
+        files = []
+
+        sys.exit(Builder().do(sys.argv[1],files,graph_range))
+
     except Exception as err :
         print(u'Make abort!\n%s' % err)
         sys.exit(1)

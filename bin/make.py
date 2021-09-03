@@ -53,6 +53,10 @@ class Node :
         self.birth = yaml[u'birth']
         self.death = yaml[u'death']
         self.desc = yaml[u'desc']
+        if u'cause_of_death' in yaml:
+            self.cause_of_death = yaml[u'cause_of_death']
+        else:
+            self.cause_of_death = None
         self.links = yaml[u'links']
 
 
@@ -131,7 +135,9 @@ class Family :
     def __init__(self, yaml) :
         self.name = yaml[u'name']
         self.inner = yaml[u'inner']
+        self.inner.reverse()
         self.outer = yaml[u'outer']
+        self.outer.reverse()
         self.members = [self.name] + self.inner + self.outer
 
         for name in self.members :
@@ -279,7 +285,7 @@ digraph
                 # print("age=" + str(age))
 
                 if age != 0:
-                    birth_age = birth_age + u',' + str(age) + u']'
+                    birth_age = birth_age + u'生,' + str(age) + u'岁]'
                 else:
                     birth_age = birth_age + u']'
         except Exception as err:
@@ -289,6 +295,12 @@ digraph
         # print("node.death=" + str(node.death))
         # print("birth_age=" + birth_age)
 
+        desc = node.desc.replace(u'\n', u'<br/>')
+        if node.cause_of_death != None and node.cause_of_death != '':
+            # print(node.cause_of_death)
+            desc = desc + "<font color = 'red'>" + node.cause_of_death.replace(u'\n', u'<br/>') + "</font>"
+            # print(desc)
+
         return template % (node.id,
                            u'box' if u'person'==node.type else u'ellipse',
                            self._node_color(node),
@@ -297,7 +309,7 @@ digraph
                            birth_age,
                            self._other_names(node),
                            portrait,
-                           node.desc.replace(u'\n', u'<br/>'))
+                           desc)
 
 
     def _dot_relation(self, name) :
@@ -395,7 +407,7 @@ if '__main__' == __name__ :
 
         Relation.single_relation = True
         graph_range = range(0, 3)
-        # files = ['01德行001','01德行004','01德行005','01德行006','01德行007','01德行008','01德行010']
+        # files = ['01德行006','01德行007','01德行008','01德行010','01德行011']
         files = []
 
         sys.exit(Builder().do(sys.argv[1],files,graph_range))

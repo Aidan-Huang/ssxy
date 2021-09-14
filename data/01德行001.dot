@@ -1,0 +1,20 @@
+
+digraph 
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "\n陈仲举言为士则，行为世范，登车揽辔，有澄清天下之志。\l为豫章太守，至，便问徐孺子所在，欲先看之。\l主簿白：“群情欲府君先入廨。”\l陈曰：“武王式商容之闾，席不暇暖。吾之礼贤，有何不可！”\n\n";
+	labelloc = "t";
+	fontsize = "12";
+	fontname = "Microsoft YaHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+
+	李膺 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>李膺[110,59]</td></tr><tr><td>(字:元礼, 官职:司隶校尉)</td></tr><tr><td></td></tr><tr><td>太尉李修之孙<br/>“登龙门”<br/>“天下模楷李元礼”<br/>弟子常达千人<br/>死于第二次党锢之祸<br/></td></tr></table>>];
+	荀淑 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>荀淑[83,66]</td></tr><tr><td>(字:季和, 官职:郎陵侯相)</td></tr><tr><td></td></tr><tr><td>战国荀子11世孙<br/>八子皆才德名世，时人谓之“八龙”。<br/></td></tr></table>>];
+
+	李膺 -> 荀淑 [label="师", style=dotted, color="blue"];
+}

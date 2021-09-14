@@ -287,7 +287,7 @@ digraph
                 if age != 0:
                     birth_age = birth_age + u'生,' + str(age) + u'岁]'
                 else:
-                    birth_age = birth_age + u']'
+                    birth_age = birth_age + u'生]'
         except Exception as err:
             print(u'error!\n%s' % err)
 
@@ -406,9 +406,9 @@ if '__main__' == __name__ :
             sys.exit(0)
 
         Relation.single_relation = True
-        graph_range = range(0, 3)
-        # files = ['01德行006','01德行007','01德行008','01德行010','01德行011']
-        files = []
+        graph_range = range(0, 4)
+        # files = ['01德行021','01德行022','01德行023','01德行024','01德行025']
+        files = ['03政事026']
 
         sys.exit(Builder().do(sys.argv[1],files,graph_range))
 

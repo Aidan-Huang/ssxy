@@ -1,0 +1,43 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语025";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	乐广 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>乐广[247生,57岁]</td></tr><tr><td>(字:彦辅, 官职:尚书令)</td></tr><tr><td></td></tr><tr><td>少孤贫，有重名，受卫瓘、王戎、裴楷等人欣赏<br/>擅长清谈论事,用心于俗事以外,和王衍齐名<br/>性冲约，有远识，寡嗜欲，与物无竞<br/>善书法，有文集二卷，今已佚。<br/>“杯弓蛇影”<br/>因司马颖岳丈的身份而被司马乂怀疑<br/>受到株连逼迫，以忧愤病卒<br/></td></tr></table>>];
+	卫玠 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>卫玠[286生,26岁]</td></tr><tr><td>(字:叔宝, 官职:太子洗马)</td></tr><tr><td></td></tr><tr><td>是魏晋之际继何晏、王弼之后的著名清谈名士和玄学家<br/>风姿秀异，有“玉人”之称<br/>中国古代四大美男之一<br/>“看杀卫玠”<br/></td></tr></table>>];
+	司马颖 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>司马颖[279生,27岁]</td></tr><tr><td>(字:章度, 封号:成都王)</td></tr><tr><td></td></tr><tr><td>晋武帝第十九子，八王之一<br/>被河间王司马颙所擒，处以火刑。<br/><font color = 'red'>东海王司马越以诏书征其入朝，<br/>其弟南阳王司马模派人将他掐死</font></td></tr></table>>];
+	司马炎 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马炎[236生,54岁]</td></tr><tr><td>(字:子上, 谥:晋武帝)</td></tr><tr><td></td></tr><tr><td>晋朝开国皇帝<br/>“太康之治”<br/></td></tr></table>>];
+	司马乂 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>司马乂[277生,27岁]</td></tr><tr><td>(字:士度, 封号:长沙王)</td></tr><tr><td></td></tr><tr><td>晋武帝第十七子，八王之一<br/>诛杀齐王司马冏<br/><font color = 'red'>被河间王司马颙所擒，处以火刑</font></td></tr></table>>];
+	司马睿 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马睿[276生,47岁]</td></tr><tr><td>(字:字景, 谥:晋元帝)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+
+	乐广 -> 司马颖 [label="女婿", style=dotted, color="blue"];
+	乐广 -> 卫玠 [label="女婿", style=dotted, color="blue"];
+	司马炎 -> 司马睿 [label="嗣子", style=dotted, color="red"];
+	司马炎 -> 司马乂 [label="十七子", style=dotted, color="blue"];
+	司马炎 -> 司马颖 [label="十九子", style=dotted, color="blue"];
+
+
+	subgraph "cluster_乐广"
+	{
+		fontsize="18";
+		label="乐广家族";
+		乐广;
+	}
+
+	subgraph "cluster_司马炎"
+	{
+		fontsize="18";
+		label="司马炎家族";
+		司马炎;司马颖;司马乂;司马睿;
+	}
+
+}

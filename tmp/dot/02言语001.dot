@@ -1,0 +1,19 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语001";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	边让 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>边让</td></tr><tr><td>(字:文礼, 官职:九江太守)</td></tr><tr><td></td></tr><tr><td>东汉末年名士、大儒<br/>博学善辩，以文章名噪一时<br/><font color = 'red'>轻视和诋毁兖州牧曹操，很快被其所杀</font></td></tr></table>>];
+
+
+
+}

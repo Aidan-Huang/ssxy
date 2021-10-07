@@ -1,0 +1,58 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语060";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	桓温 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>桓温[312生,61岁]</td></tr><tr><td>(字:元子, 官职:大司马)</td></tr><tr><td></td></tr><tr><td>谯国桓氏代表人物<br/>少时有豪迈风气<br/>姿貌甚伟，面有七星<br/>三次领导北伐<br/>掌握朝政并曾操纵废立<br/></td></tr></table>>];
+	桓玄 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>桓玄[369生,35岁]</td></tr><tr><td>(字:敬道, 世袭:南郡公, 谥:武悼皇帝)</td></tr><tr><td></td></tr><tr><td>东晋末期桓楚政权建立者<br/>在位6个月<br/><font color = 'red'>刘裕起兵，兵败身死</font></td></tr></table>>];
+	桓冲 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>桓冲[328生,56岁]</td></tr><tr><td>(字:幼子，小字买德郎, 官职:车骑将军)</td></tr><tr><td></td></tr><tr><td>东晋著名将领、军事家，忠于晋室<br/></td></tr></table>>];
+	桓彝 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>桓彝[276生,52岁]</td></tr><tr><td>(字:茂伦, 官职:散骑常侍)</td></tr><tr><td></td></tr><tr><td>齐桓公后代<br/>协助讨平王敦之乱<br/><font color = 'red'>苏峻之乱中拒降战死</font></td></tr></table>>];
+	温峤 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>温峤[288生,41岁]</td></tr><tr><td>(字:泰真, 官职:骠骑将军)</td></tr><tr><td></td></tr><tr><td>东晋政治家、军事家、名将<br/></td></tr></table>>];
+	庾亮 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>庾亮[289生,51岁]</td></tr><tr><td>(字:元规)</td></tr><tr><td></td></tr><tr><td>东晋时期权臣和外戚<br/>美姿容，擅长清谈<br/>喜好老庄学说<br/></td></tr></table>>];
+	司马睿 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马睿[276生,47岁]</td></tr><tr><td>(字:字景, 谥:晋元帝)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	司马道子 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>司马道子[364生,39岁]</td></tr><tr><td>(字:道子, 官职:太子太傅, 封:琅邪王)</td></tr><tr><td></td></tr><tr><td>东晋宗室，孝武帝亲弟<br/><font color = 'red'>儿子司马元显败于桓玄后<br/>遭流放，不久被杀<br/></font></td></tr></table>>];
+	司马曜 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马曜[362生,34岁]</td></tr><tr><td>(字:昌明, 谥:孝武帝)</td></tr><tr><td></td></tr><tr><td>东晋第九个皇帝<br/>“淝水之战”<br/><font color = 'red'>被宠妃张贵人所杀</font></td></tr></table>>];
+	司马昱 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马昱[320生,52岁]</td></tr><tr><td>(字:道万, 官职:会稽王,抚军将军,简文帝)</td></tr><tr><td></td></tr><tr><td>晋朝的第十四代皇帝，东晋的第八代皇帝<br/>历经元、明、成、康、穆、哀、废帝七朝<br/>后为大司马桓温拥戴即帝，但为其所制<br/>为人宽厚，爱好清谈<br/></td></tr></table>>];
+	司马奕 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马奕[342生,44岁]</td></tr><tr><td>(字:延龄, 谥:晋废帝, 封:海西公)</td></tr><tr><td></td></tr><tr><td>东晋的第七代皇帝<br/>郗超建议桓温废除天子以立威信<br/>桓温便指司马奕阳痿不能人道，<br/>废帝再贬为海西县公，杀三皇子<br/></td></tr></table>>];
+	司马衍 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马衍[321生,21岁]</td></tr><tr><td>(字:世根, 谥:晋成帝)</td></tr><tr><td></td></tr><tr><td>东晋第三代皇帝<br/>即位不久遇上苏峻之乱，一度遭叛军劫持<br/>成帝一朝军政主要由外戚颖川庾氏把持<br/></td></tr></table>>];
+	庾文君 [shape="box", color="darkorange", label=<<table border="0" cellborder="0"><tr><td>庾文君[297生,31岁]</td></tr><tr><td>(字:彦辅, 谥:明穆皇后)</td></tr><tr><td></td></tr><tr><td>晋明帝司马绍的皇后<br/></td></tr></table>>];
+	司马绍 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马绍[299生,26岁]</td></tr><tr><td>(字:道畿, 谥:晋明帝)</td></tr><tr><td></td></tr><tr><td>东晋的第二代皇帝<br/>在位不足三年，平定了王敦之乱<br/></td></tr></table>>];
+
+	桓彝 -> 桓温 [label="子", style=solid, color="blue"];
+	桓彝 -> 桓冲 [label="子", style=solid, color="blue"];
+	桓温 -> 桓玄 [label="子", style=solid, color="red"];
+	桓彝 -> 庾亮 [label="友", style=dotted, color="blue"];
+	桓彝 -> 温峤 [label="友", style=dotted, color="blue"];
+	司马睿 -> 司马绍 [label="长子", style=solid, color="red"];
+	司马绍 -> 司马衍 [label="长子", style=solid, color="red"];
+	司马衍 -> 司马奕 [label="子", style=solid, color="red"];
+	司马昱 -> 司马曜 [label="六子", style=solid, color="red"];
+	司马昱 -> 司马道子 [label="七子", style=solid, color="blue"];
+	司马睿 -> 司马昱 [label="幼子", style=solid, color="red"];
+	司马绍 -> 庾文君 [label="妻", style=bold, color="darkorange"];
+
+
+	subgraph "cluster_桓温"
+	{
+		fontsize="18";
+		label="桓温家族";
+		桓温;桓玄;桓冲;桓温;桓彝;
+	}
+
+	subgraph "cluster_司马睿"
+	{
+		fontsize="18";
+		label="司马睿家族";
+		司马睿;司马道子;司马曜;司马昱;司马奕;司马衍;庾文君;司马绍;
+	}
+
+}

@@ -1,0 +1,21 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语080";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	殷浩 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>殷浩[303生,53岁]</td></tr><tr><td>(字:渊源, 官职:中军将军,扬州刺史)</td></tr><tr><td></td></tr><tr><td>东晋时期大臣、将领，曾隐居十年，<br/>早年以见识度量、清明高远而富有美名<br/>在司马昱培养下，成为与桓温对抗的势力，<br/>后因北伐失败而被废为庶人<br/></td></tr></table>>];
+	韩伯 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>韩伯</td></tr><tr><td>(字:康伯, 官职:吏部尚书)</td></tr><tr><td></td></tr><tr><td>东晋玄学思想家<br/>自幼聪明，家酷贫<br/>史称康伯“清和有思理，留心文艺”<br/></td></tr></table>>];
+
+	殷浩 -> 韩伯 [label="侄子", style=dotted, color="blue"];
+
+
+}

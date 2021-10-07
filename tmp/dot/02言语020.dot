@@ -1,0 +1,40 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语020";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	司马炎 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马炎[236生,54岁]</td></tr><tr><td>(字:子上, 谥:晋武帝)</td></tr><tr><td></td></tr><tr><td>晋朝开国皇帝<br/>“太康之治”<br/></td></tr></table>>];
+	司马颖 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>司马颖[279生,27岁]</td></tr><tr><td>(字:章度, 封号:成都王)</td></tr><tr><td></td></tr><tr><td>晋武帝第十九子，八王之一<br/>被河间王司马颙所擒，处以火刑。<br/><font color = 'red'>东海王司马越以诏书征其入朝，<br/>其弟南阳王司马模派人将他掐死</font></td></tr></table>>];
+	司马乂 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>司马乂[277生,27岁]</td></tr><tr><td>(字:士度, 封号:长沙王)</td></tr><tr><td></td></tr><tr><td>晋武帝第十七子，八王之一<br/>诛杀齐王司马冏<br/><font color = 'red'>被河间王司马颙所擒，处以火刑</font></td></tr></table>>];
+	司马睿 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马睿[276生,47岁]</td></tr><tr><td>(字:字景, 谥:晋元帝)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	满奋 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>满奋</td></tr><tr><td>(字:武秋, 官职:尚书令)</td></tr><tr><td></td></tr><tr><td>晋朝大臣，曹魏太尉满宠之孙<br/>身长八尺，生性清静平和，<br/>有才识，体量通雅<br/>畏风，"吴牛喘月"<br/><font color = 'red'>因不满上官巳残暴横行于洛阳，<br/>联合河南尹周馥谋划刺杀，事泄遇害。<br/></font></td></tr></table>>];
+
+	司马炎 -> 司马睿 [label="嗣子", style=dotted, color="red"];
+	司马炎 -> 司马乂 [label="十七子", style=dotted, color="blue"];
+	司马炎 -> 司马颖 [label="十九子", style=dotted, color="blue"];
+
+
+	subgraph "cluster_司马炎"
+	{
+		fontsize="18";
+		label="司马炎家族";
+		司马炎;司马颖;司马乂;司马睿;
+	}
+
+	subgraph "cluster_满奋"
+	{
+		fontsize="18";
+		label="满奋家族";
+		满奋;
+	}
+
+}

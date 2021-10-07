@@ -1,0 +1,25 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语002";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	陈蕃 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>陈蕃</td></tr><tr><td>(字:仲举, 官职:太尉)</td></tr><tr><td></td></tr><tr><td>东汉末著名大臣，桓帝时为太尉，灵帝时为太傅<br/>与窦武、刘淑合称“三君”<br/>“不畏强御陈仲举”<br/><font color = 'red'>与外戚谋诛宦官，事泄被杀<br/></font></td></tr></table>>];
+	周乘 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>周乘[247生,57岁]</td></tr><tr><td>(字:子居, 官职:尚书令)</td></tr><tr><td></td></tr><tr><td>“天资聪朗，高峙岳立”<br/>与陈蕃、黄宪友善<br/></td></tr></table>>];
+	李膺 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>李膺[110生,59岁]</td></tr><tr><td>(字:元礼, 官职:司隶校尉)</td></tr><tr><td></td></tr><tr><td>太尉李修之孙<br/>“登龙门”<br/>“天下模楷李元礼”<br/>弟子常达千人<br/><font color = 'red'>死于第二次党锢之祸<br/></font></td></tr></table>>];
+	徐稚 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>徐稚[97生,71岁]</td></tr><tr><td>(字:孺子)</td></tr><tr><td></td></tr><tr><td>反对宦官乱政，终未出仕<br/>郭泰称之为“南州高士”<br/>《滕王阁序》"人杰地灵，徐孺下陈蕃之榻"<br/></td></tr></table>>];
+
+	陈蕃 -> 徐稚 [label="友", style=dotted, color="blue"];
+	陈蕃 -> 李膺 [label="友", style=dotted, color="blue"];
+	陈蕃 -> 周乘 [label="友", style=dotted, color="blue"];
+
+
+}

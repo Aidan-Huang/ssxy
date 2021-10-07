@@ -1,0 +1,42 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语021";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	孙权 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>孙权[182生,70岁]</td></tr><tr><td>(字:仲谋, 谥:吴大帝)</td></tr><tr><td></td></tr><tr><td>吴的缔造奠定者、建国皇帝<br/>著名政治家、战略家<br/></td></tr></table>>];
+	孙皓 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>孙皓[243生,41岁]</td></tr><tr><td>(字:元宗, 称:吴末帝)</td></tr><tr><td></td></tr><tr><td>三国时期孙吴的第四位，<br/>同时也是最后一位皇帝。<br/>中国历史上有名的暴君，<br/>生性多疑且残暴，设立诸多酷刑。<br/>富有才气，有一定书法造诣，还能吟诗唱歌<br/></td></tr></table>>];
+	诸葛亮 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>诸葛亮[181生,53岁]</td></tr><tr><td>(字:孔明, 官职:丞相)</td></tr><tr><td></td></tr><tr><td>中国历史上著名的政治家、军事家、<br/>发明家、外交家和文学家。<br/>"卧龙"<br/></td></tr></table>>];
+	诸葛瑾 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>诸葛瑾[174生,67岁]</td></tr><tr><td>(字:子瑜, 官职:大将军)</td></tr><tr><td></td></tr><tr><td>东吴重要谋士，官至大将军<br/>公私分明，因各为其主，出使蜀国时，<br/>兄弟聚面只谈论公务，私下不相往来，<br/>但会互通书信作问候<br/></td></tr></table>>];
+	诸葛靓 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>诸葛靓</td></tr><tr><td>(字:仲思, 官职:大司马)</td></tr><tr><td></td></tr><tr><td>诸葛诞叛乱时，被送至东吴当人质，<br/>吴亡后投降晋朝，但因父仇而终身不仕<br/>时人称许他至孝<br/></td></tr></table>>];
+	诸葛诞 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>诸葛诞</td></tr><tr><td>(字:公休, 官职:征东大将军)</td></tr><tr><td></td></tr><tr><td>诸葛亮和诸葛瑾的堂弟<br/>三国时曹魏后期的重要将领<br/><font color = 'red'>于寿春发动叛乱，兵败被杀<br/></font></td></tr></table>>];
+
+	孙权 -> 孙皓 [label="孙", style=dotted, color="red"];
+	诸葛亮 -> 诸葛瑾 [label="兄", style=dashed, color="blue"];
+	诸葛亮 -> 诸葛诞 [label="堂弟", style=dashed, color="blue"];
+	诸葛诞 -> 诸葛靓 [label="幼子", style=solid, color="blue"];
+
+
+	subgraph "cluster_孙权"
+	{
+		fontsize="18";
+		label="孙权家族";
+		孙权;孙皓;
+	}
+
+	subgraph "cluster_诸葛亮"
+	{
+		fontsize="18";
+		label="诸葛亮家族";
+		诸葛亮;诸葛瑾;
+	}
+
+}

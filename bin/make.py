@@ -352,6 +352,9 @@ digraph
 
 
 class Builder :
+
+    output_dir = u'/download'
+
     def __init__(self) :
         Node.init()
         Relation.init()
@@ -367,8 +370,9 @@ class Builder :
         return os.system(cmd.encode(u'utf-8'))
 
     def output(self, name, graph, file_type):
-        dot_file = u'../download/dot/%s.dot' % (name,)
-        output_file = u'../download/%s/%s.%s' % (file_type, name, file_type)
+
+        dot_file = u'..' + self.output_dir + '/dot/%s.dot' % (name,)
+        output_file = u'..' + self.output_dir + '/%s/%s.%s' % (file_type, name, file_type)
 
         with open(dot_file, u'wb') as f:
             f.write(Graph(graph).dump().encode(u'utf-8'))
@@ -379,7 +383,7 @@ class Builder :
             _raise_err(u'Make "%s" failed!', dot_file)
 
     def do(self, file_type, files, graph_range) :
-        os.chdir(u'../download/')
+        os.chdir(u'..' + self.output_dir + '/')
         self._mkdir(u'dot')
         self._mkdir(file_type)
 
@@ -406,9 +410,12 @@ if '__main__' == __name__ :
             sys.exit(0)
 
         Relation.single_relation = True
-        graph_range = range(0, 4)
-        # files = ['01德行021','01德行022','01德行023','01德行024','01德行025']
-        files = ['03政事026']
+        Builder.output_dir = u'/tmp'
+        graph_range = range(2, 3)
+
+        files = []
+        # files = ['01德行031','01德行032','01德行033','01德行034','01德行035']
+        # files = ['04文学104']
 
         sys.exit(Builder().do(sys.argv[1],files,graph_range))
 

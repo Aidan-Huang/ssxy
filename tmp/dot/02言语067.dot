@@ -1,0 +1,46 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语067";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	王衍 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王衍[256生,55岁]</td></tr><tr><td>(字:夷甫, 官职:中书令、尚书令、司徒、司空、太尉)</td></tr><tr><td></td></tr><tr><td>清明俊秀，风姿详雅，笃好老庄学说，<br/>崇尚浮华放诞，为当时名士之首<br/>王戎堂弟<br/>喜好清谈，不喜欢参与实质政事， 并以求自保为首要。<br/>“清谈误国”，“信口雌黄”<br/><font color = 'red'>被石勒俘杀</font></td></tr></table>>];
+	王徽 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王徽[247生,57岁]</td></tr><tr><td>(小字:荆产, 官职:右军司马)</td></tr><tr><td></td></tr><tr><td>王乂之孙，王詹之弟<br/>是放诞不羁的人<br/></td></tr></table>>];
+	王澄 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王澄[269生,43岁]</td></tr><tr><td>(字:平子, 官职:荆州刺史)</td></tr><tr><td></td></tr><tr><td>东晋名士，有盛名<br/>勇力过人，好清谈<br/><font color = 'red'>被王敦猜忌，派力士路戎杀死<br/></font></td></tr></table>>];
+	王乂 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王乂</td></tr><tr><td>(字:叔元, 官职:平北将军)</td></tr><tr><td></td></tr><tr><td>曹魏官员<br/></td></tr></table>>];
+	王浑 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王浑</td></tr><tr><td>(字:长源, 官职:凉州刺史)</td></tr><tr><td></td></tr><tr><td>曹魏官员<br/></td></tr></table>>];
+	刘惔 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>刘惔</td></tr><tr><td>(字:真长, 官职:丹杨尹)</td></tr><tr><td></td></tr><tr><td>汉室后裔，晋明帝女婿<br/>善清谈，尤好老庄，与王羲之相友善，为王导所器重<br/>为政清整，交游广泛，有政治远见和识人之明<br/>《唐会要》尊其为魏晋八君子之一<br/>“居官无官官之事，处事无事事之心”<br/></td></tr></table>>];
+	沛国相县刘氏 [shape="box", color="darkgreen", label=<<table border="0" cellborder="0"><tr><td>刘氏</td></tr><tr><td></td></tr><tr><td>“周姥撰诗，当无此语”<br/>机智幽默,性格刚强<br/>不许谢安纳妾<br/></td></tr></table>>];
+	谢安 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>谢安[320生,65岁]</td></tr><tr><td>(字:安石, 官职:太傅)</td></tr><tr><td></td></tr><tr><td>少以清谈知名，屡辞辟命，年四十余方出仕<br/>简文帝逝后，与王坦之挫败桓温篡位意图<br/>淝水之战中，指挥谢石、谢玄等<br/>以八万兵力大败号称百万的前秦军队<br/>后因功名太盛而被孝武帝猜忌，被迫前往广陵避祸<br/>“东山再起”  “谢安折屐”<br/></td></tr></table>>];
+
+	王乂 -> 王衍 [label="子", style=solid, color="blue"];
+	王乂 -> 王澄 [label="子", style=solid, color="blue"];
+	王澄 -> 王徽 [label="次子", style=solid, color="blue"];
+	王浑 -> 王乂 [label="弟", style=dashed, color="blue"];
+	谢安 -> 沛国相县刘氏 [label="妻", style=bold, color="darkgreen"];
+	刘惔 -> 沛国相县刘氏 [label="妹", style=dashed, color="darkgreen"];
+
+
+	subgraph "cluster_王衍"
+	{
+		fontsize="18";
+		label="王衍家族";
+		王衍;王徽;王澄;王乂;
+	}
+
+	subgraph "cluster_刘惔"
+	{
+		fontsize="18";
+		label="刘惔家族";
+		刘惔;沛国相县刘氏;刘惔;
+	}
+
+}

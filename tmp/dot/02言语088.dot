@@ -1,0 +1,21 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语088";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	顾恺之 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>顾恺之[348生,57岁]</td></tr><tr><td>(字:长康, 官职:散骑常侍)</td></tr><tr><td></td></tr><tr><td>东晋著名画家，以人物画著称<br/>多才，工诗赋，善书法，时称“才绝、画绝、痴绝”<br/>与陆探微、张僧繇合称“六朝三大家”<br/></td></tr></table>>];
+	顾悦 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>顾悦[320生]</td></tr><tr><td>(或名:悦之, 字:君叔, 官职:尚书右丞)</td></tr><tr><td></td></tr><tr><td>东晋大臣，书画家顾恺之父亲<br/>少有义行，与简文帝司马昱同年<br/>曾抗表弹劾殷浩，时人咸称之<br/></td></tr></table>>];
+
+	顾悦 -> 顾恺之 [label="子", style=solid, color="blue"];
+
+
+}

@@ -1,0 +1,27 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语009";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	庞德公 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>庞德公</td></tr><tr><td>(字:尚长, 号:德公)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	庞统 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>庞统[179生,35岁]</td></tr><tr><td>(字:士元, 官职:军师中郎将)</td></tr><tr><td></td></tr><tr><td>“凤雏”，刘备重臣谋士<br/>诸葛亮二姐夫庞山民的堂兄弟<br/></td></tr></table>>];
+	徐庶 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>徐庶</td></tr><tr><td>(字:元直, 原名:福)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	诸葛亮 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>诸葛亮[181生,53岁]</td></tr><tr><td>(字:孔明, 官职:丞相)</td></tr><tr><td></td></tr><tr><td>中国历史上著名的政治家、军事家、<br/>发明家、外交家和文学家。<br/>"卧龙"<br/></td></tr></table>>];
+	司马徽 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>司马徽</td></tr><tr><td>(字:德操, 人称:水镜先生)</td></tr><tr><td></td></tr><tr><td>东汉末年名士<br/>“好好先生”<br/></td></tr></table>>];
+
+	庞德公 -> 庞统 [label="侄子", style=dotted, color="blue"];
+	庞德公 -> 司马徽 [label="友", style=dotted, color="blue"];
+	庞德公 -> 诸葛亮 [label="友", style=dotted, color="blue"];
+	庞德公 -> 徐庶 [label="友", style=dotted, color="blue"];
+
+
+}

@@ -1,0 +1,44 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语047";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	陶侃 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>陶侃[259生,75岁]</td></tr><tr><td>(字:士行, 官职:太尉，长沙郡公)</td></tr><tr><td></td></tr><tr><td>晋朝名将，出身寒门<br/>在世族垄断高位的东晋是一个例外<br/></td></tr></table>>];
+	陶渊明 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>陶渊明[365生,62岁]</td></tr><tr><td>(改名:潜, 字:元亮, 号:五柳先生, 官职:彭泽县令)</td></tr><tr><td></td></tr><tr><td>东晋、刘宋的文学家<br/>“田园诗人”，不为五斗米折腰<br/>《桃花源记》<br/></td></tr></table>>];
+	陶范 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>陶范</td></tr><tr><td>(字:道则，小字胡奴, 官职:光禄勋)</td></tr><tr><td></td></tr><tr><td>东晋陶侃之子，为其诸子中最有名之人<br/></td></tr></table>>];
+	谢鲲 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>谢鲲[281生,42岁]</td></tr><tr><td>(字:幼舆, 官职:豫章太守)</td></tr><tr><td></td></tr><tr><td>两晋名士，谢安伯父<br/>为名士王衍四友之一，名列“江左八达”<br/>知敦有谋逆之意，不可谏劝，遂不屑政事<br/>“投梭折齿”<br/></td></tr></table>>];
+	谢真石 [shape="box", color="darkgreen", label=<<table border="0" cellborder="0"><tr><td>谢真石</td></tr><tr><td>(字:彦辅, 官职:尚书令)</td></tr><tr><td></td></tr><tr><td>晋穆帝的外祖母<br/></td></tr></table>>];
+	谢尚 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>谢尚[308生,49岁]</td></tr><tr><td>(字:仁祖, 官职:镇西将军)</td></tr><tr><td></td></tr><tr><td>东晋太傅谢安从兄<br/>精通音律，善舞蹈，工书法，尚清谈。<br/>“小安丰”<br/></td></tr></table>>];
+	谢安 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>谢安[320生,65岁]</td></tr><tr><td>(字:安石, 官职:太傅)</td></tr><tr><td></td></tr><tr><td>少以清谈知名，屡辞辟命，年四十余方出仕<br/>简文帝逝后，与王坦之挫败桓温篡位意图<br/>淝水之战中，指挥谢石、谢玄等<br/>以八万兵力大败号称百万的前秦军队<br/>后因功名太盛而被孝武帝猜忌，被迫前往广陵避祸<br/>“东山再起”  “谢安折屐”<br/></td></tr></table>>];
+
+	陶侃 -> 陶范 [label="子", style=solid, color="blue"];
+	陶侃 -> 陶渊明 [label="曾孙", style=dotted, color="blue"];
+	谢鲲 -> 谢尚 [label="子", style=solid, color="blue"];
+	谢鲲 -> 谢真石 [label="女", style=solid, color="darkgreen"];
+	谢安 -> 谢鲲 [label="伯父", style=dotted, color="blue"];
+
+
+	subgraph "cluster_陶侃"
+	{
+		fontsize="18";
+		label="陶侃家族";
+		陶侃;陶渊明;陶范;陶侃;
+	}
+
+	subgraph "cluster_谢鲲"
+	{
+		fontsize="18";
+		label="谢鲲家族";
+		谢鲲;谢真石;谢尚;
+	}
+
+}

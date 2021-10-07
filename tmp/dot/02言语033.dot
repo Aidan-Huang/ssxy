@@ -1,0 +1,74 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语033";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	司马睿 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马睿[276生,47岁]</td></tr><tr><td>(字:字景, 谥:晋元帝)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	司马道子 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>司马道子[364生,39岁]</td></tr><tr><td>(字:道子, 官职:太子太傅, 封:琅邪王)</td></tr><tr><td></td></tr><tr><td>东晋宗室，孝武帝亲弟<br/><font color = 'red'>儿子司马元显败于桓玄后<br/>遭流放，不久被杀<br/></font></td></tr></table>>];
+	司马曜 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马曜[362生,34岁]</td></tr><tr><td>(字:昌明, 谥:孝武帝)</td></tr><tr><td></td></tr><tr><td>东晋第九个皇帝<br/>“淝水之战”<br/><font color = 'red'>被宠妃张贵人所杀</font></td></tr></table>>];
+	司马昱 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马昱[320生,52岁]</td></tr><tr><td>(字:道万, 官职:会稽王,抚军将军,简文帝)</td></tr><tr><td></td></tr><tr><td>晋朝的第十四代皇帝，东晋的第八代皇帝<br/>历经元、明、成、康、穆、哀、废帝七朝<br/>后为大司马桓温拥戴即帝，但为其所制<br/>为人宽厚，爱好清谈<br/></td></tr></table>>];
+	司马奕 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马奕[342生,44岁]</td></tr><tr><td>(字:延龄, 谥:晋废帝, 封:海西公)</td></tr><tr><td></td></tr><tr><td>东晋的第七代皇帝<br/>郗超建议桓温废除天子以立威信<br/>桓温便指司马奕阳痿不能人道，<br/>废帝再贬为海西县公，杀三皇子<br/></td></tr></table>>];
+	司马衍 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马衍[321生,21岁]</td></tr><tr><td>(字:世根, 谥:晋成帝)</td></tr><tr><td></td></tr><tr><td>东晋第三代皇帝<br/>即位不久遇上苏峻之乱，一度遭叛军劫持<br/>成帝一朝军政主要由外戚颖川庾氏把持<br/></td></tr></table>>];
+	庾文君 [shape="box", color="darkorange", label=<<table border="0" cellborder="0"><tr><td>庾文君[297生,31岁]</td></tr><tr><td>(字:彦辅, 谥:明穆皇后)</td></tr><tr><td></td></tr><tr><td>晋明帝司马绍的皇后<br/></td></tr></table>>];
+	司马绍 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>司马绍[299生,26岁]</td></tr><tr><td>(字:道畿, 谥:晋明帝)</td></tr><tr><td></td></tr><tr><td>东晋的第二代皇帝<br/>在位不足三年，平定了王敦之乱<br/></td></tr></table>>];
+	王导 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王导[276生,63岁]</td></tr><tr><td>(字:茂弘, 官职:丞相)</td></tr><tr><td></td></tr><tr><td>东晋政治家、书法家<br/>"王与马，共天下"<br/>“旧时王谢堂前燕”<br/>"伯仁由我而死"<br/></td></tr></table>>];
+	王珉 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王珉[351生,37岁]</td></tr><tr><td>(字:季琰，小字僧弥, 官职:中书令)</td></tr><tr><td></td></tr><tr><td>东晋官员、书法家<br/>与王献之齐名，官至中书令，时人称之为小令<br/></td></tr></table>>];
+	王珣 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王珣[349生,51岁]</td></tr><tr><td>(字:元琳，小字法护, 封:东亭侯)</td></tr><tr><td></td></tr><tr><td>晋代官员、书法家<br/>与谢氏结成姻亲，却互相猜嫌，<br/>后谢安更让二人离婚，王谢两家于是成了仇敌<br/></td></tr></table>>];
+	王洽 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王洽[323生,35岁]</td></tr><tr><td>(字:敬和, 官职:中书令)</td></tr><tr><td></td></tr><tr><td>王导第三子，诸子中最为知名，与荀羡齐名<br/>其孙王弘助刘裕建立南朝宋<br/></td></tr></table>>];
+	王恬 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王恬[314生,35岁]</td></tr><tr><td>(字:敬豫, 官职:后将军)</td></tr><tr><td></td></tr><tr><td>少好武艺<br/>擅长隶书<br/>围棋好手<br/></td></tr></table>>];
+	王悦 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王悦</td></tr><tr><td>(字:长豫, 官职:中书侍郎)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	曹淑 [shape="box", color="darkgreen", label=<<table border="0" cellborder="0"><tr><td>曹淑</td></tr><tr><td></td></tr><tr><td>征西参军曹悦孙女<br/>镇东将军司马曹韶女儿<br/></td></tr></table>>];
+	王旷 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王旷</td></tr><tr><td>(字:世宏, 官职:淮南郡太守)</td></tr><tr><td></td></tr><tr><td>晋朝书法家<br/>首倡过江之议<br/>遇刘聪于长平，<br/>战败后去向不明。<br/></td></tr></table>>];
+	王敦 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王敦[266生,58岁]</td></tr><tr><td>(字:处仲)</td></tr><tr><td></td></tr><tr><td>协助司马睿建立东晋政权<br/>王敦之乱<br/></td></tr></table>>];
+	顾荣 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>顾荣</td></tr><tr><td>(字:彦先, 官职:骠骑将军)</td></tr><tr><td></td></tr><tr><td>江东士族，名望很大<br/>协助司马睿建立东晋<br/>西晋灭东吴后，与陆机和陆云入洛阳，号为三俊<br/></td></tr></table>>];
+	顾和 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>顾和[288生,63岁]</td></tr><tr><td>(字:君孝, 官职:尚书令)</td></tr><tr><td></td></tr><tr><td>晋朝政治人物<br/></td></tr></table>>];
+
+	司马睿 -> 司马绍 [label="长子", style=solid, color="red"];
+	司马绍 -> 司马衍 [label="长子", style=solid, color="red"];
+	司马衍 -> 司马奕 [label="子", style=solid, color="red"];
+	司马昱 -> 司马曜 [label="六子", style=solid, color="red"];
+	司马昱 -> 司马道子 [label="七子", style=solid, color="blue"];
+	司马睿 -> 司马昱 [label="幼子", style=solid, color="red"];
+	司马绍 -> 庾文君 [label="妻", style=bold, color="darkorange"];
+	王导 -> 曹淑 [label="妻", style=bold, color="darkgreen"];
+	王导 -> 王悦 [label="长子", style=solid, color="blue"];
+	王导 -> 王恬 [label="次子", style=solid, color="blue"];
+	王导 -> 王洽 [label="三子", style=solid, color="blue"];
+	王洽 -> 王珣 [label="长子", style=solid, color="blue"];
+	王洽 -> 王珉 [label="子", style=solid, color="blue"];
+	王导 -> 王敦 [label="堂兄", style=dashed, color="blue"];
+	王导 -> 王旷 [label="从弟", style=dashed, color="blue"];
+	顾荣 -> 顾和 [label="族侄", style=dotted, color="blue"];
+
+
+	subgraph "cluster_司马睿"
+	{
+		fontsize="18";
+		label="司马睿家族";
+		司马睿;司马道子;司马曜;司马昱;司马奕;司马衍;庾文君;司马绍;
+	}
+
+	subgraph "cluster_王导"
+	{
+		fontsize="18";
+		label="王导家族";
+		王导;王珉;王珣;王洽;王恬;王悦;曹淑;
+	}
+
+	subgraph "cluster_顾荣"
+	{
+		fontsize="18";
+		label="顾荣家族";
+		顾荣;
+	}
+
+}

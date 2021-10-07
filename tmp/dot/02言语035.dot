@@ -1,0 +1,23 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语035";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	刘琨 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>刘琨[270生,48岁]</td></tr><tr><td>(字:越石)</td></tr><tr><td></td></tr><tr><td>西汉中山靖王刘胜之后<br/>西晋末年、十六国时期政治家、<br/>文学家、音乐家、军事家。<br/>“闻鸡起舞”<br/>派温峤到建康上表劝进<br/><font color = 'red'>王敦派人密告段匹䃅,<br/>段匹䃅假借诏书将其下狱缢杀<br/></font></td></tr></table>>];
+	卢谌 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>卢谌[285生,66岁]</td></tr><tr><td>(字:子谅, 官职:尚书令)</td></tr><tr><td></td></tr><tr><td>东汉儒学家卢植玄孙<br/>死于后赵末年的战乱当中<br/></td></tr></table>>];
+	温峤 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>温峤[288生,41岁]</td></tr><tr><td>(字:泰真, 官职:骠骑将军)</td></tr><tr><td></td></tr><tr><td>东晋政治家、军事家、名将<br/></td></tr></table>>];
+
+	刘琨 -> 温峤 [label="外甥", style=dotted, color="blue"];
+	刘琨 -> 卢谌 [label="外甥", style=dotted, color="blue"];
+
+
+}

@@ -1,0 +1,25 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语012";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	钟皓 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>钟皓[86生,68岁]</td></tr><tr><td>(字:季明)</td></tr><tr><td></td></tr><tr><td>东汉名士<br/></td></tr></table>>];
+	钟毓 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>钟毓[224生,39岁]</td></tr><tr><td>(字:稚叔, 官职:尚书)</td></tr><tr><td></td></tr><tr><td>曹魏重臣<br/></td></tr></table>>];
+	钟会 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>钟会[225生,39岁]</td></tr><tr><td>(字:士季, 官职:司徒)</td></tr><tr><td></td></tr><tr><td>灭蜀汉的曹魏将领<br/>玄学家、书法家<br/><font color = 'red'>谋反，兵变被杀<br/></font></td></tr></table>>];
+	钟繇 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>钟繇[151生,79岁]</td></tr><tr><td>(字:元常, 官职:太傅)</td></tr><tr><td></td></tr><tr><td>三国时期曹魏重臣、著名书法家<br/>与王羲之合称为“锺王”。<br/></td></tr></table>>];
+
+	钟皓 -> 钟繇 [label="孙", style=dotted, color="blue"];
+	钟繇 -> 钟毓 [label="嗣子", style=dotted, color="blue"];
+	钟繇 -> 钟会 [label="子", style=solid, color="blue"];
+
+
+}

@@ -1,0 +1,60 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语102";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	王导 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王导[276生,63岁]</td></tr><tr><td>(字:茂弘, 官职:丞相)</td></tr><tr><td></td></tr><tr><td>东晋政治家、书法家<br/>"王与马，共天下"<br/>“旧时王谢堂前燕”<br/>"伯仁由我而死"<br/></td></tr></table>>];
+	王珉 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王珉[351生,37岁]</td></tr><tr><td>(字:季琰，小字僧弥, 官职:中书令)</td></tr><tr><td></td></tr><tr><td>东晋官员、书法家<br/>与王献之齐名，官至中书令，时人称之为小令<br/></td></tr></table>>];
+	王珣 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王珣[349生,51岁]</td></tr><tr><td>(字:元琳，小字法护, 封:东亭侯)</td></tr><tr><td></td></tr><tr><td>晋代官员、书法家<br/>与谢氏结成姻亲，却互相猜嫌，<br/>后谢安更让二人离婚，王谢两家于是成了仇敌<br/></td></tr></table>>];
+	王洽 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王洽[323生,35岁]</td></tr><tr><td>(字:敬和, 官职:中书令)</td></tr><tr><td></td></tr><tr><td>王导第三子，诸子中最为知名，与荀羡齐名<br/>其孙王弘助刘裕建立南朝宋<br/></td></tr></table>>];
+	王恬 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王恬[314生,35岁]</td></tr><tr><td>(字:敬豫, 官职:后将军)</td></tr><tr><td></td></tr><tr><td>少好武艺<br/>擅长隶书<br/>围棋好手<br/></td></tr></table>>];
+	王悦 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王悦</td></tr><tr><td>(字:长豫, 官职:中书侍郎)</td></tr><tr><td></td></tr><tr><td></td></tr></table>>];
+	曹淑 [shape="box", color="darkgreen", label=<<table border="0" cellborder="0"><tr><td>曹淑</td></tr><tr><td></td></tr><tr><td>征西参军曹悦孙女<br/>镇东将军司马曹韶女儿<br/></td></tr></table>>];
+	王旷 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王旷</td></tr><tr><td>(字:世宏, 官职:淮南郡太守)</td></tr><tr><td></td></tr><tr><td>晋朝书法家<br/>首倡过江之议<br/>遇刘聪于长平，<br/>战败后去向不明。<br/></td></tr></table>>];
+	王敦 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>王敦[266生,58岁]</td></tr><tr><td>(字:处仲)</td></tr><tr><td></td></tr><tr><td>协助司马睿建立东晋政权<br/>王敦之乱<br/></td></tr></table>>];
+	桓温 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>桓温[312生,61岁]</td></tr><tr><td>(字:元子, 官职:大司马)</td></tr><tr><td></td></tr><tr><td>谯国桓氏代表人物<br/>少时有豪迈风气<br/>姿貌甚伟，面有七星<br/>三次领导北伐<br/>掌握朝政并曾操纵废立<br/></td></tr></table>>];
+	桓玄 [shape="box", color="red", label=<<table border="0" cellborder="0"><tr><td>桓玄[369生,35岁]</td></tr><tr><td>(字:敬道, 世袭:南郡公, 谥:武悼皇帝)</td></tr><tr><td></td></tr><tr><td>东晋末期桓楚政权建立者<br/>在位6个月<br/><font color = 'red'>刘裕起兵，兵败身死</font></td></tr></table>>];
+	桓冲 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>桓冲[328生,56岁]</td></tr><tr><td>(字:幼子，小字买德郎, 官职:车骑将军)</td></tr><tr><td></td></tr><tr><td>东晋著名将领、军事家，忠于晋室<br/></td></tr></table>>];
+	桓彝 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>桓彝[276生,52岁]</td></tr><tr><td>(字:茂伦, 官职:散骑常侍)</td></tr><tr><td></td></tr><tr><td>齐桓公后代<br/>协助讨平王敦之乱<br/><font color = 'red'>苏峻之乱中拒降战死</font></td></tr></table>>];
+	温峤 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>温峤[288生,41岁]</td></tr><tr><td>(字:泰真, 官职:骠骑将军)</td></tr><tr><td></td></tr><tr><td>东晋政治家、军事家、名将<br/></td></tr></table>>];
+	庾亮 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>庾亮[289生,51岁]</td></tr><tr><td>(字:元规)</td></tr><tr><td></td></tr><tr><td>东晋时期权臣和外戚<br/>美姿容，擅长清谈<br/>喜好老庄学说<br/></td></tr></table>>];
+
+	王导 -> 曹淑 [label="妻", style=bold, color="darkgreen"];
+	王导 -> 王悦 [label="长子", style=solid, color="blue"];
+	王导 -> 王恬 [label="次子", style=solid, color="blue"];
+	王导 -> 王洽 [label="三子", style=solid, color="blue"];
+	王洽 -> 王珣 [label="长子", style=solid, color="blue"];
+	王洽 -> 王珉 [label="子", style=solid, color="blue"];
+	王导 -> 王敦 [label="堂兄", style=dashed, color="blue"];
+	王导 -> 王旷 [label="从弟", style=dashed, color="blue"];
+	桓彝 -> 桓温 [label="子", style=solid, color="blue"];
+	桓彝 -> 桓冲 [label="子", style=solid, color="blue"];
+	桓温 -> 桓玄 [label="子", style=solid, color="red"];
+	桓彝 -> 庾亮 [label="友", style=dotted, color="blue"];
+	桓彝 -> 温峤 [label="友", style=dotted, color="blue"];
+
+
+	subgraph "cluster_王导"
+	{
+		fontsize="18";
+		label="王导家族";
+		王导;王珉;王珣;王洽;王恬;王悦;曹淑;
+	}
+
+	subgraph "cluster_桓温"
+	{
+		fontsize="18";
+		label="桓温家族";
+		桓温;桓玄;桓冲;桓温;桓彝;
+	}
+
+}

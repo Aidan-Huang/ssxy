@@ -1,0 +1,27 @@
+
+digraph
+{
+	rankdir = "LR";
+	ranksep = 0.5;
+	label = "02言语041";
+	labelloc = "t";
+	fontsize = "24";
+	fontname = "SimHei";
+
+	graph [style="filled", color="lightgrey"];
+	node [fontname="SimSun"];
+	edge [fontname="SimSun"];
+
+	庾亮 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>庾亮[289生,51岁]</td></tr><tr><td>(字:元规)</td></tr><tr><td></td></tr><tr><td>东晋时期权臣和外戚<br/>美姿容，擅长清谈<br/>喜好老庄学说<br/></td></tr></table>>];
+	庾翼 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>庾翼[305生,40岁]</td></tr><tr><td>(字:稚恭, 官职:征西将军)</td></tr><tr><td></td></tr><tr><td>东晋将领和书法家<br/></td></tr></table>>];
+	庾文君 [shape="box", color="darkorange", label=<<table border="0" cellborder="0"><tr><td>庾文君[297生,31岁]</td></tr><tr><td>(字:彦辅, 谥:明穆皇后)</td></tr><tr><td></td></tr><tr><td>晋明帝司马绍的皇后<br/></td></tr></table>>];
+	庾冰 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>庾冰[296生,48岁]</td></tr><tr><td>(字:季坚, 官职:车骑将军)</td></tr><tr><td></td></tr><tr><td>东晋官员<br/>王导死后以中书监身份在内朝掌权<br/></td></tr></table>>];
+	庾龢 [shape="box", color="blue", label=<<table border="0" cellborder="0"><tr><td>庾龢[316生]</td></tr><tr><td>(字:道季, 官职:中领军)</td></tr><tr><td></td></tr><tr><td>太尉庾亮之子<br/>少时好学，有文才<br/></td></tr></table>>];
+
+	庾亮 -> 庾龢 [label="子", style=solid, color="blue"];
+	庾亮 -> 庾冰 [label="弟", style=dashed, color="blue"];
+	庾亮 -> 庾文君 [label="妹", style=dashed, color="darkorange"];
+	庾亮 -> 庾翼 [label="弟", style=dashed, color="blue"];
+
+
+}

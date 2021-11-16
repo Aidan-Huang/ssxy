@@ -388,7 +388,7 @@ class Builder :
         self._mkdir(file_type)
 
         for i in graph_range:
-            filename = u'../data/graph' + str(i) + '.yaml'
+            filename = u'../data/categories/graph' + str(i) + '.yaml'
 
             if len(files) > 0:
                 for graph in _load_yaml(filename):
@@ -411,11 +411,12 @@ if '__main__' == __name__ :
 
         Relation.single_relation = True
         Builder.output_dir = u'/tmp'
-        graph_range = range(2, 3)
+        graph_range = range(5, 6)
 
         files = []
-        # files = ['01德行031','01德行032','01德行033','01德行034','01德行035']
-        # files = ['04文学104']
+        # files = ['01德行036','01德行037','01德行038','01德行039','01德行040']
+        # files = ['02言语044']
+        # files = ['05方正061']
 
         sys.exit(Builder().do(sys.argv[1],files,graph_range))
 

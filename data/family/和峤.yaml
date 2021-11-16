@@ -8,11 +8,10 @@ name: 和峤
 inner: []
 
 # outer 表示“外围成员”（通常是非血缘关系引入的成员）
-outer: [夏侯玄]
+outer: []
 
 # relations 表示“家族成员关系”。使用 YAML 的【list】语法表示。
 # 每一行又是一个 list，包含三个元素，分别表示：[from, to, desc]
 # 考虑到生成“关系图”的展示效果，desc 尽量用一到两个字表示。
 relations:
-    - [和峤,夏侯玄, 侄子]
   

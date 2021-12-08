@@ -411,12 +411,12 @@ if '__main__' == __name__ :
 
         Relation.single_relation = True
         Builder.output_dir = u'/tmp'
-        graph_range = range(5, 6)
+        graph_range = range(6, 7)
 
         files = []
         # files = ['01德行036','01德行037','01德行038','01德行039','01德行040']
-        # files = ['02言语044']
-        # files = ['05方正061']
+        # files = ['02言语008']
+        # files = ['06雅量035']
 
         sys.exit(Builder().do(sys.argv[1],files,graph_range))
 
